@@ -2,18 +2,15 @@
 <html>
   <head>
     <title>Room Scale Dynamic Earth</title>
-    <meta name="description" content="Hello, WebXR! - A-Frame">
-    <!-- Origin Trial Token, feature = WebVR (For Chrome M62+), origin = https://webxrexperiments.com, expires = 2018-05-01 -->
-    <meta http-equiv="origin-trial" data-feature="WebVR (For Chrome M62+)" data-expires="2018-05-01" content="ArKeZe0EK5eAEXO1K+Uj07h/yA2ylN8xwt+12LVV8ReELbePVTiSBRd4GYOnKzHpFktLh/nkPafQFDuvMhVX4goAAABseyJvcmlnaW4iOiJodHRwczovL3dlYnhyZXhwZXJpbWVudHMuY29tOjQ0MyIsImZlYXR1cmUiOiJXZWJWUjEuMU02MiIsImV4cGlyeSI6MTUyNTE3ODYwNywiaXNTdWJkb21haW4iOnRydWV9">
-    <script src='../dependencies/aframe-master.js'></script>
-    <script src='../dependencies/three.xr.js'></script>
-    <script src='../dependencies/aframe-xr.js'></script>
-  </head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head>
   <body>
     <a-scene>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E" shadow xr="magicWindow: false"></a-sphere>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow xr="ar: false; vr: false;"></a-plane>
-      <a-sky color="#ECECEC" side="back" xr="ar: false"></a-sky>
+      <a-entity progressive-controls></a-entity>
+      <a-sphere id="earth" src="https://raw.githubusercontent.com/aframevr/sample-assets/master/assets/images/space/earth_atmos_4096.jpg" radius="2"
+                segments-height="84"></a-sphere>
+      <a-camera  position='0 0 5' user-height='0'></a-camera>
+      <a-sky color="white"></a-sky>
     </a-scene>
   </body>
 </html>
